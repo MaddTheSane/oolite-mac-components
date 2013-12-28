@@ -57,5 +57,82 @@
 	</dict>
 	<key>CFPlugInUnloadFunction</key>
 	<string></string>
+	<key>UTImportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.text</string>
+				<string>com.apple.property-list</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>Oolite Saved Game</string>
+			<key>UTTypeIconFile</key>
+			<string>oolite-document</string>
+			<key>UTTypeIdentifier</key>
+			<string>org.aegidian.oolite.save</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>oolite-save</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.item</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>Oolite Expansion Pack</string>
+			<key>UTTypeIconFile</key>
+			<string>oolite-expansion-document</string>
+			<key>UTTypeIdentifier</key>
+			<string>org.aegidian.oolite.expansion</string>
+			<key>UTTypeReferenceURL</key>
+			<string>http://wiki.alioth.net/index.php/OXP_howto</string>
+			<key>UTTypeTagSpecification</key>
+			<dict/>
+		</dict>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>org.aegidian.oolite.expansion</string>
+				<string>com.apple.package</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>Oolite Expansion Pack</string>
+			<key>UTTypeIdentifier</key>
+			<string>org.aegidian.oolite.oxp</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>oxp</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>org.aegidian.oolite.expansion</string>
+				<string>com.pkware.zip-archive</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>Oolite Expansion Pack</string>
+			<key>UTTypeIdentifier</key>
+			<string>org.aegidian.oolite.oxp.compressed</string>
+			<key>UTTypeReferenceURL</key>
+			<string></string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>oxz</string>
+				</array>
+			</dict>
+		</dict>
+	</array>
 </dict>
 </plist>
