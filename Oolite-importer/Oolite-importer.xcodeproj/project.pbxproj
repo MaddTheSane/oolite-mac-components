@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1A1AB0E80909B67E001039FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A1AB0E70909B67E001039FA /* Foundation.framework */; };
-		1A3E01DA11C57598000FF226 /* NSScannerOOExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A3E01D811C57598000FF226 /* NSScannerOOExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1A3E01DE11C5759E000FF226 /* OOCollectionExtractors.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A3E01DC11C5759E000FF226 /* OOCollectionExtractors.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1A3E01DA11C57598000FF226 /* NSScannerOOExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A3E01D811C57598000FF226 /* NSScannerOOExtensions.m */; };
+		1A3E01DE11C5759E000FF226 /* OOCollectionExtractors.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A3E01DC11C5759E000FF226 /* OOCollectionExtractors.m */; };
 		1A69FD68090A3BC600914D59 /* schema.xml in Resources */ = {isa = PBXBuildFile; fileRef = C88FB7D7067446EC006EBB30 /* schema.xml */; };
 		1A9F9652184272570092A97D /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A9F9650184272570092A97D /* unzip.c */; };
-		1A9F96571842726F0092A97D /* NSDataOOExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9F96551842726F0092A97D /* NSDataOOExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -Wno-missing-field-initializers"; }; };
+		1A9F96571842726F0092A97D /* NSDataOOExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9F96551842726F0092A97D /* NSDataOOExtensions.m */; settings = {COMPILER_FLAGS = "-Wno-missing-field-initializers"; }; };
 		1A9F965918427DFE0092A97D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9F965818427DFE0092A97D /* libz.dylib */; };
 		1A9F965C18427E1A0092A97D /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A9F965A18427E1A0092A97D /* ioapi.c */; };
 		1AADEB2E09169CCB00B6D1FA /* Values.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AADEB2D09169CCB00B6D1FA /* Values.plist */; };
