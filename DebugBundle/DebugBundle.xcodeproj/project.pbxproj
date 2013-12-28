@@ -501,6 +501,11 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = $OOLITE_OPTION_MACROS;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					../../deps/mozilla/js/src/,
+					"../../deps/Cocoa-deps/libjs",
+				);
 				IBC_WARNINGS = NO;
 				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
@@ -526,6 +531,11 @@
 				);
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = $OOLITE_OPTION_MACROS;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					../../deps/mozilla/js/src/,
+					"../../deps/Cocoa-deps/libjs",
+				);
 				IBC_WARNINGS = NO;
 				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
@@ -556,6 +566,44 @@
 			};
 			name = TestRelease;
 		};
+		55F16D18186F8C4600E75C3E /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AD88FD9103F2F0500AA36F4 /* oolite-options.xcconfig */;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+			};
+			name = Deployment;
+		};
+		55F16D19186F8C4600E75C3E /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = $CONFIGURATION_BUILD_DIR/Oolite.app/Contents/MacOS/Oolite;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = $OOLITE_OPTION_MACROS;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					../../deps/mozilla/js/src/,
+					"../../deps/Cocoa-deps/libjs",
+				);
+				IBC_WARNINGS = NO;
+				INFOPLIST_FILE = Resources/Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
+				PRODUCT_NAME = Debug;
+				SYMROOT = ../../build;
+				USER_HEADER_SEARCH_PATHS = "../../src/Cocoa ../../src/Core/** $(SYMROOT)/$(CONFIGURATION)/include/js";
+				WARNING_CFLAGS = $OO_WARNING_FLAGS;
+			};
+			name = Deployment;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -564,6 +612,7 @@
 			buildConfigurations = (
 				1DEB913B08733D840010E9CD /* Debug */,
 				1DEB913C08733D840010E9CD /* TestRelease */,
+				55F16D19186F8C4600E75C3E /* Deployment */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = TestRelease;
@@ -573,6 +622,7 @@
 			buildConfigurations = (
 				1DEB913F08733D840010E9CD /* Debug */,
 				1DEB914008733D840010E9CD /* TestRelease */,
+				55F16D18186F8C4600E75C3E /* Deployment */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = TestRelease;
