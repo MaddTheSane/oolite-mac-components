@@ -8,19 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		1A1AB0E80909B67E001039FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A1AB0E70909B67E001039FA /* Foundation.framework */; };
-		1A21AE83118CD0A800D4D137 /* OoliteImporterPrefix.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A21AE82118CD0A800D4D137 /* OoliteImporterPrefix.h */; };
-		1A3E01D911C57598000FF226 /* NSScannerOOExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A3E01D711C57598000FF226 /* NSScannerOOExtensions.h */; };
 		1A3E01DA11C57598000FF226 /* NSScannerOOExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A3E01D811C57598000FF226 /* NSScannerOOExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1A3E01DD11C5759E000FF226 /* OOCollectionExtractors.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A3E01DB11C5759E000FF226 /* OOCollectionExtractors.h */; };
 		1A3E01DE11C5759E000FF226 /* OOCollectionExtractors.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A3E01DC11C5759E000FF226 /* OOCollectionExtractors.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1A69FD68090A3BC600914D59 /* schema.xml in Resources */ = {isa = PBXBuildFile; fileRef = C88FB7D7067446EC006EBB30 /* schema.xml */; };
 		1A9F9652184272570092A97D /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A9F9650184272570092A97D /* unzip.c */; };
-		1A9F9653184272570092A97D /* unzip.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A9F9651184272570092A97D /* unzip.h */; };
-		1A9F96561842726F0092A97D /* NSDataOOExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A9F96541842726F0092A97D /* NSDataOOExtensions.h */; };
 		1A9F96571842726F0092A97D /* NSDataOOExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9F96551842726F0092A97D /* NSDataOOExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -Wno-missing-field-initializers"; }; };
 		1A9F965918427DFE0092A97D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9F965818427DFE0092A97D /* libz.dylib */; };
 		1A9F965C18427E1A0092A97D /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A9F965A18427E1A0092A97D /* ioapi.c */; };
-		1A9F965D18427E1A0092A97D /* ioapi.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A9F965B18427E1A0092A97D /* ioapi.h */; };
 		1AADEB2E09169CCB00B6D1FA /* Values.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AADEB2D09169CCB00B6D1FA /* Values.plist */; };
 		2C05A19C06CAA52B00D84F6F /* GetMetadataForFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C05A19B06CAA52B00D84F6F /* GetMetadataForFile.m */; };
 		8D576312048677EA00EA77CD /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 08FB77B6FE84183AC02AAC07 /* main.c */; settings = {ATTRIBUTES = (); }; };
@@ -75,7 +69,6 @@
 		089C166AFE841209C02AAC07 /* Oolite-importer */ = {
 			isa = PBXGroup;
 			children = (
-				1A9F965818427DFE0092A97D /* libz.dylib */,
 				1A1966F5104EC4880079B400 /* oolite-targets.xcconfig */,
 				08FB77AFFE84173DC02AAC07 /* Source */,
 				089C167CFE841241C02AAC07 /* Resources */,
@@ -88,6 +81,7 @@
 		089C1671FE841209C02AAC07 /* External Frameworks and Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				1A9F965818427DFE0092A97D /* libz.dylib */,
 				1A1AB0E70909B67E001039FA /* Foundation.framework */,
 				C86B05260671AA6E00DD9006 /* CoreServices.framework */,
 				0AA1909FFE8422F4C02AAC07 /* CoreFoundation.framework */,
@@ -146,28 +140,11 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		8D57630E048677EA00EA77CD /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1A21AE83118CD0A800D4D137 /* OoliteImporterPrefix.h in Headers */,
-				1A9F9653184272570092A97D /* unzip.h in Headers */,
-				1A9F96561842726F0092A97D /* NSDataOOExtensions.h in Headers */,
-				1A9F965D18427E1A0092A97D /* ioapi.h in Headers */,
-				1A3E01D911C57598000FF226 /* NSScannerOOExtensions.h in Headers */,
-				1A3E01DD11C5759E000FF226 /* OOCollectionExtractors.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
 		8D57630D048677EA00EA77CD /* Oolite-importer */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A1AB07D0909AE56001039FA /* Build configuration list for PBXNativeTarget "Oolite-importer" */;
 			buildPhases = (
-				8D57630E048677EA00EA77CD /* Headers */,
 				8D57630F048677EA00EA77CD /* Resources */,
 				8D576311048677EA00EA77CD /* Sources */,
 				8D576313048677EA00EA77CD /* Frameworks */,
@@ -289,10 +266,8 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = /Library/Spotlight;
 				LIBRARY_SEARCH_PATHS = "";
-				LIBRARY_STYLE = Bundle;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
-				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = Oolite;
 				SECTORDER_FLAGS = "";
 				SYMROOT = ../../build;
@@ -302,7 +277,6 @@
 					"-Wno-unused-parameter",
 				);
 				WRAPPER_EXTENSION = mdimporter;
-				ZERO_LINK = NO;
 			};
 			name = TestRelease;
 		};
@@ -320,7 +294,6 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
-				DEBUGGING_SYMBOLS = YES;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -338,10 +311,8 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = /Library/Spotlight;
 				LIBRARY_SEARCH_PATHS = "";
-				LIBRARY_STYLE = Bundle;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
-				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = Oolite;
 				SECTORDER_FLAGS = "";
 				SYMROOT = ../../build;
@@ -351,7 +322,6 @@
 					"-Wno-unused-parameter",
 				);
 				WRAPPER_EXTENSION = mdimporter;
-				ZERO_LINK = NO;
 			};
 			name = Debug;
 		};
@@ -393,10 +363,8 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = /Library/Spotlight;
 				LIBRARY_SEARCH_PATHS = "";
-				LIBRARY_STYLE = Bundle;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
-				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = Oolite;
 				SECTORDER_FLAGS = "";
 				SYMROOT = ../../build;
@@ -406,7 +374,6 @@
 					"-Wno-unused-parameter",
 				);
 				WRAPPER_EXTENSION = mdimporter;
-				ZERO_LINK = NO;
 			};
 			name = Deployment;
 		};

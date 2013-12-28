@@ -22,10 +22,10 @@ MA 02110-1301, USA.
 
 */
 
-#import <CoreFoundation/CoreFoundation.h>
-#import <CoreServices/CoreServices.h>
+#include <CoreFoundation/CoreFoundation.h>
+#include <CoreServices/CoreServices.h>
 #import <Foundation/Foundation.h>
-#import <stdarg.h>
+#include <stdarg.h>
 #import "NSScannerOOExtensions.h"
 #import "OOCollectionExtractors.h"
 #import "NSDataOOExtensions.h"
@@ -61,26 +61,24 @@ static NSDictionary *OOParseRolesFromString(NSString *string);
 static NSMutableArray *ScanTokensFromString(NSString *values);
 
 
-/*
-	NOTE: this prototype differs from the one declared in main.c (which is mostly unmodified
-	Apple boilerplate code), but the types are entirely compatible.
-*/
 BOOL GetMetadataForFile(void *thisInterface,
-			   NSMutableDictionary *attributes, 
-			   CFStringRef contentTypeUTI,
-			   NSString *pathToFile)
+						CFMutableDictionaryRef attributes,
+						CFStringRef contentTypeUTI,
+						CFStringRef pathToFile)
 {
 	@autoreleasepool
 	{
+		NSMutableDictionary *tmpMutDict = (__bridge NSMutableDictionary*)attributes;
+		NSString *tmpPathStr = (__bridge NSString*)pathToFile;
 		@try
 		{
 			if (UTTypeConformsTo(contentTypeUTI, CFSTR("org.aegidian.oolite.save")))
 			{
-				return GetMetadataForSaveFile(thisInterface, attributes, pathToFile);
+				return GetMetadataForSaveFile(thisInterface, tmpMutDict, tmpPathStr);
 			}
 			if (UTTypeConformsTo(contentTypeUTI, CFSTR("org.aegidian.oolite.expansion")))
 			{
-				return GetMetadataForExpansionPack(thisInterface, attributes, pathToFile);
+				return GetMetadataForExpansionPack(thisInterface, tmpMutDict, tmpPathStr);
 			}
 		}
 		@catch (id any)
@@ -339,7 +337,7 @@ static NSMutableArray *ScanTokensFromString(NSString *values)
 	NSString				*token = nil;
 	static NSCharacterSet	*space_set = nil;
 	
-	if (values == nil)  return [NSArray array];
+	if (values == nil)  return [NSMutableArray array];
 	if (space_set == nil) space_set = [NSCharacterSet whitespaceAndNewlineCharacterSet];
 	
 	result = [NSMutableArray array];
