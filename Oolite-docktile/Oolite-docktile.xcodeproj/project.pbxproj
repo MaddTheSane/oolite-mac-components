@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A2B76FE130041F700B4B752 /* JAPersistentFileReference.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A2B76FC130041F700B4B752 /* JAPersistentFileReference.h */; };
 		1A2B76FF130041F700B4B752 /* JAPersistentFileReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B76FD130041F700B4B752 /* JAPersistentFileReference.m */; };
 		1A60EE7911B82D8100224F2D /* OODockTilePlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A60EE7811B82D8100224F2D /* OODockTilePlugIn.m */; };
 		1A60EE8C11B82EA200224F2D /* OODockTilePlugIn.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A60EE8A11B82EA200224F2D /* OODockTilePlugIn.xib */; };
@@ -117,23 +116,11 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		1A8FAB0812F0EB35008FF5A2 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1A2B76FE130041F700B4B752 /* JAPersistentFileReference.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
 		8D5B49AC048680CD000E48DA /* Oolite-docktile */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "Oolite-docktile" */;
 			buildPhases = (
-				1A8FAB0812F0EB35008FF5A2 /* Headers */,
 				8D5B49AF048680CD000E48DA /* Resources */,
 				8D5B49B1048680CD000E48DA /* Sources */,
 				8D5B49B3048680CD000E48DA /* Frameworks */,
@@ -234,7 +221,6 @@
 			baseConfigurationReference = 1AE38EC215C3FEED000709CA /* oolite-targets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Oolite-docktile_Prefix.pch";
@@ -258,7 +244,6 @@
 			baseConfigurationReference = 1AE38EC215C3FEED000709CA /* oolite-targets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				COMBINE_HIDPI_IMAGES = YES;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -283,7 +268,6 @@
 			baseConfigurationReference = 1AE38EC215C3FEED000709CA /* oolite-targets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Oolite-docktile_Prefix.pch";
