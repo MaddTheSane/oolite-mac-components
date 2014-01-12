@@ -16,6 +16,8 @@
 	<string>${PRODUCT_NAME}</string>
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
+	<key>CFBundleSignature</key>
+	<string>Ool8</string>
 	<key>CFBundleVersion</key>
 	<string>${VERSION}</string>
 	<key>NSPrincipalClass</key>

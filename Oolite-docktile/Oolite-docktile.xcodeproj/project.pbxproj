@@ -226,9 +226,11 @@
 				GCC_PREFIX_HEADER = "Oolite-docktile_Prefix.pch";
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = Info.plist;
+				PLIST_FILE_OUTPUT_FORMAT = binary;
 				PRODUCT_NAME = Oolite;
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = macosx;
+				STRINGS_FILE_OUTPUT_ENCODING = binary;
 				SYMROOT = ../../build;
 				WARNING_CFLAGS = (
 					"-Wall",
@@ -273,6 +275,7 @@
 				GCC_PREFIX_HEADER = "Oolite-docktile_Prefix.pch";
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = Info.plist;
+				PLIST_FILE_OUTPUT_FORMAT = XML;
 				PRODUCT_NAME = Oolite;
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = macosx;

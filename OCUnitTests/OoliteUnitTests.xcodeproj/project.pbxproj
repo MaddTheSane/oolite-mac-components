@@ -299,6 +299,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OoliteUnitTests/OoliteUnitTests-Prefix.pch";
 				INFOPLIST_FILE = "OoliteUnitTests/OoliteUnitTests-Info.plist";
+				PLIST_FILE_OUTPUT_FORMAT = XML;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = octest;
@@ -331,8 +332,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OoliteUnitTests/OoliteUnitTests-Prefix.pch";
 				INFOPLIST_FILE = "OoliteUnitTests/OoliteUnitTests-Info.plist";
+				PLIST_FILE_OUTPUT_FORMAT = binary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				STRINGS_FILE_OUTPUT_ENCODING = binary;
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Deployment;
