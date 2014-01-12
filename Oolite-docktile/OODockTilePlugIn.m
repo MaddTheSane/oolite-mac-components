@@ -86,7 +86,7 @@ static NSArray *ResourceManagerRootPaths(void);
 	
 	for (i = 0; i < count; i++)
 	{
-		path = [rootPaths objectAtIndex:i];
+		path = rootPaths[i];
 		if ([[NSFileManager defaultManager] fileExistsAtPath:path isDirectory:&pathIsDirectory] && pathIsDirectory) break;
 	}
 	if (path != nil) [[NSWorkspace sharedWorkspace] openURL:[NSURL fileURLWithPath:path]];
@@ -155,11 +155,11 @@ static NSString *DESC(NSString *key)
 		url = [NSURL URLWithString:@"../../Resources/Config/descriptions.plist" relativeToURL:url];
 		
 		descs = [NSDictionary dictionaryWithContentsOfURL:url];
-		if (descs == nil)  descs = [NSDictionary dictionary];
+		if (descs == nil)  descs = @{};
 		[descs retain];
 	}
 	
-	NSString *result = [descs objectForKey:key];
+	NSString *result = descs[key];
 	if (![result isKindOfClass:[NSString class]])  result = key;	// We don't need to deal with arrays.
 	return result;
 }
@@ -207,7 +207,7 @@ static NSString *DESC(NSString *key)
 		NSArray *searchPaths = NSSearchPathForDirectoriesInDomains(NSDesktopDirectory, NSUserDomainMask, YES);
 		if ([searchPaths count] > 0)
 		{
-			path = [[searchPaths objectAtIndex:0] stringByAppendingPathComponent:name];
+			path = [searchPaths[0] stringByAppendingPathComponent:name];
 		}
 		url = [NSURL fileURLWithPath:path];
 		
@@ -269,7 +269,7 @@ static NSString *OOLogHandlerGetLogBasePath(void)
 	if (basePath == nil)
 	{
 		// ~/Library
-		basePath = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+		basePath = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES)[0];
 		basePath = [basePath stringByAppendingPathComponent:@"Logs"];
 		basePath = [basePath stringByAppendingPathComponent:@"Oolite"];
 		
@@ -302,8 +302,7 @@ static NSString *OOLogHandlerGetLogBasePath(void)
 static NSArray *ResourceManagerRootPaths(void)
 {
 	// Adapted from -[ResourceManager rootPaths].
-	return [NSArray arrayWithObjects:
-			[[[[NSHomeDirectory() stringByAppendingPathComponent:@"Library"]
+	return @[[[[[NSHomeDirectory() stringByAppendingPathComponent:@"Library"]
 			   stringByAppendingPathComponent:@"Application Support"]
 			  stringByAppendingPathComponent:@"Oolite"]
 			 stringByAppendingPathComponent:@"AddOns"],
@@ -312,6 +311,5 @@ static NSArray *ResourceManagerRootPaths(void)
 			 stringByAppendingPathComponent:@"AddOns"],
 			[[NSHomeDirectory()
 			  stringByAppendingPathComponent:@".Oolite"]
-			 stringByAppendingPathComponent:@"AddOns"],
-			nil];
+			 stringByAppendingPathComponent:@"AddOns"]];
 }

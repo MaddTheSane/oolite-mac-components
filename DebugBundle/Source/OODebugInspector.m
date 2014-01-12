@@ -57,7 +57,7 @@ static NSMutableDictionary		*sActiveInspectors = nil;
 	
 	// Look for existing inspector
 	key = [NSValue valueWithNonretainedObject:object];
-	inspector = [sActiveInspectors objectForKey:key];
+	inspector = sActiveInspectors[key];
 	if (inspector != nil)
 	{
 		if ([inspector object] == object)  return inspector;
@@ -143,7 +143,7 @@ static NSMutableDictionary		*sActiveInspectors = nil;
 		[self placeModules];
 		
 		if (sActiveInspectors == nil)  sActiveInspectors = [[NSMutableDictionary alloc] init];
-		[sActiveInspectors setObject:self forKey:_key];
+		sActiveInspectors[_key] = self;
 	}
 	
 	return self;

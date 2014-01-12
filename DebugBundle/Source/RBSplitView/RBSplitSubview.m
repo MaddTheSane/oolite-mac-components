@@ -169,7 +169,7 @@ static animationData* currentAnimation = NULL;
 		if (newPosition>=[subviews count]) {
 			[sv addSubview:self positioned:NSWindowAbove relativeTo:nil];
 		} else {
-			[sv addSubview:self positioned:NSWindowBelow relativeTo:[subviews objectAtIndex:newPosition]];
+			[sv addSubview:self positioned:NSWindowBelow relativeTo:subviews[newPosition]];
 		}
 		[self release];
 	}
@@ -700,8 +700,8 @@ static animationData* currentAnimation = NULL;
 				anim->elapsedTime += [NSDate timeIntervalSinceReferenceDate]-now;
 				++anim->stepsDone;
 // Schedule a timer to do the next animation step.
-				[self performSelector:@selector(RB___stepAnimation) withObject:nil afterDelay:delay inModes:[NSArray arrayWithObjects:NSDefaultRunLoopMode,NSModalPanelRunLoopMode,
-					NSEventTrackingRunLoopMode,nil]];
+				[self performSelector:@selector(RB___stepAnimation) withObject:nil afterDelay:delay inModes:@[NSDefaultRunLoopMode,NSModalPanelRunLoopMode,
+					NSEventTrackingRunLoopMode]];
 				return;
 			}
 		}

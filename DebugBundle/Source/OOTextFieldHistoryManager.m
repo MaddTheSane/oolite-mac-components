@@ -112,7 +112,7 @@
 {
 	[self checkInvariant];
 	
-	if (_historyCurrSize == 0 || ![string isEqual:[_history objectAtIndex:_historyCurrSize - 1]])
+	if (_historyCurrSize == 0 || ![string isEqual:_history[_historyCurrSize - 1]])
 	{
 		[_history addObject:[[string copy] autorelease]];
 	}
@@ -182,7 +182,7 @@
 	if (newCursor > 0)
 	{
 		NSUInteger index = _historyCurrSize - newCursor;
-		value = [_history objectAtIndex:index];
+		value = _history[index];
 		if (_historyCursor == 0)  _latest = [[textStorage string] copy];
 	}
 	else

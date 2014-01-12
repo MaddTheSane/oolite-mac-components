@@ -88,7 +88,7 @@ static OODebugController *sSingleton = nil;
 		}
 		else
 		{
-			[NSBundle loadNibFile:nibPath externalNameTable:[NSDictionary dictionaryWithObject:self forKey:@"NSOwner"] withZone:NULL];
+			[NSBundle loadNibFile:nibPath externalNameTable:@{@"NSOwner": self} withZone:NULL];
 			
 			[self insertDebugMenu];
 			[self setUpLogMessageClassMenu];

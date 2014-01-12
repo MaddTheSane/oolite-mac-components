@@ -82,7 +82,7 @@ SOFTWARE.
 	NSInteger clickedRow = [sender clickedRow];
 	if (clickedRow < 0)  return;
 	
-	[[_members objectAtIndex:clickedRow] inspect];
+	[_members[clickedRow] inspect];
 }
 
 
@@ -94,7 +94,7 @@ SOFTWARE.
 
 - (id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
-	return [[_members objectAtIndex:row] inspDescription];
+	return [_members[row] inspDescription];
 }
 
 @end

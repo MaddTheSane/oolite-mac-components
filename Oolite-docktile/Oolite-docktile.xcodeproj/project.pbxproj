@@ -242,6 +242,7 @@
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = Oolite;
 				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = macosx;
 				SYMROOT = ../../build;
 				WARNING_CFLAGS = (
 					"-Wall",
@@ -266,6 +267,7 @@
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = Oolite;
 				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = macosx;
 				SYMROOT = ../../build;
 				WARNING_CFLAGS = (
 					"-Wall",
@@ -289,6 +291,7 @@
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = Oolite;
 				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = macosx;
 				SYMROOT = ../../build;
 				WARNING_CFLAGS = (
 					"-Wall",

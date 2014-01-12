@@ -106,7 +106,7 @@ SOFTWARE.
 
 - (NSArray *) debugInspectorModules
 {
-	return [[NSArray array] arrayByAddingInspectorModuleOfClass:[OOObjectDebugInspectorModule class]
+	return [@[] arrayByAddingInspectorModuleOfClass:[OOObjectDebugInspectorModule class]
 													  forObject:(id)self];
 }
 
