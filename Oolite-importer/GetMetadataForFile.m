@@ -226,7 +226,7 @@ static id GetBundlePropertyList(NSString *inPListName)
 	NSBundle *bundle = [NSBundle bundleWithIdentifier:@"org.aegidian.oolite.md-importer"];
 	NSString *path = [bundle pathForResource:inPListName ofType:@"plist"];
 	NSData *data = [NSData dataWithContentsOfFile:path];
-	return [NSPropertyListSerialization propertyListFromData:data mutabilityOption:NSPropertyListImmutable format:NULL errorDescription:NULL];
+	return [NSPropertyListSerialization propertyListWithData:data options:NSPropertyListImmutable format:NULL error:NULL];
 }
 
 
