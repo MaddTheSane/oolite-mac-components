@@ -452,7 +452,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
 				PRODUCT_NAME = Debug;
-				SDKROOT = macosx;
 				SYMROOT = ../../build;
 				USER_HEADER_SEARCH_PATHS = "../../src/Cocoa ../../src/Core/** $(SYMROOT)/$(CONFIGURATION)/include/js";
 				WARNING_CFLAGS = $OO_WARNING_FLAGS;
@@ -480,7 +479,6 @@
 				PLIST_FILE_OUTPUT_FORMAT = XML;
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
 				PRODUCT_NAME = Debug;
-				SDKROOT = macosx;
 				SYMROOT = ../../build;
 				USER_HEADER_SEARCH_PATHS = "../../src/Cocoa ../../src/Core/** $(SYMROOT)/$(CONFIGURATION)/include/js";
 				WARNING_CFLAGS = $OO_WARNING_FLAGS;
@@ -566,7 +564,6 @@
 				PLIST_FILE_OUTPUT_FORMAT = binary;
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
 				PRODUCT_NAME = Debug;
-				SDKROOT = macosx;
 				STRINGS_FILE_OUTPUT_ENCODING = binary;
 				SYMROOT = ../../build;
 				USER_HEADER_SEARCH_PATHS = "../../src/Cocoa ../../src/Core/** $(SYMROOT)/$(CONFIGURATION)/include/js";
