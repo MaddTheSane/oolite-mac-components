@@ -306,7 +306,7 @@ static NSDictionary *OOParseRolesFromString(NSString *string)
 	// Scan tokens, looking for probabilities.
 	for (i = 0; i != count; ++i)
 	{
-		role = [tokens objectAtIndex:i];
+		role = tokens[i];
 		
 		probability = 1.0f;
 		if ([role rangeOfString:@"("].location != NSNotFound)
@@ -321,7 +321,7 @@ static NSDictionary *OOParseRolesFromString(NSString *string)
 		// shipKey roles start with [ so other roles can't
 		if (0 <= probability && ![role hasPrefix:@"["])
 		{
-			[result setObject:[NSNumber numberWithFloat:probability] forKey:role];
+			result[role] = @(probability);
 		}
 	}
 	
