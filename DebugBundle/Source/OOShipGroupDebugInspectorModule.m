@@ -45,7 +45,6 @@ SOFTWARE.
 {
 	OOShipGroup			*object = [self object];
 	NSString			*placeholder = InspectorUnknownValueString();
-	NSEnumerator		*memberEnum = nil;
 	ShipEntity			*member = nil;
 	NSMutableArray		*members = nil;
 	
@@ -53,7 +52,7 @@ SOFTWARE.
 	
 	// Make array of weakRefs to group members.
 	members = [NSMutableArray array];
-	for (memberEnum = [object objectEnumerator]; (member = [memberEnum nextObject]); )
+	foreach(member, object)
 	{
 		id memberRef = [member weakRetain];
 		[members addObject:memberRef];
