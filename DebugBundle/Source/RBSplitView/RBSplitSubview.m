@@ -169,7 +169,7 @@ static animationData* currentAnimation = NULL;
 		if (newPosition>=[subviews count]) {
 			[sv addSubview:self positioned:NSWindowAbove relativeTo:nil];
 		} else {
-			[sv addSubview:self positioned:NSWindowBelow relativeTo:subviews[newPosition]];
+			[sv addSubview:self positioned:NSWindowBelow relativeTo:[subviews objectAtIndex:newPosition]];
 		}
 		[self release];
 	}

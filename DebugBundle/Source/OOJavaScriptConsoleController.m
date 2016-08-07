@@ -344,7 +344,7 @@ enum
 	
 	if (key == nil)  key = @"general";
 	
-	result = _fgColors[key];
+	result = [_fgColors objectForKey:key];
 	if (result == nil)
 	{
 		// No cached colour; load colour description from config file
@@ -365,7 +365,7 @@ enum
 		if (result != nil)
 		{
 			if (_fgColors == nil)  _fgColors = [[NSMutableDictionary alloc] init];
-			_fgColors[key] = result;
+			[_fgColors setObject:result forKey:key];
 		}
 	}
 	
@@ -380,7 +380,7 @@ enum
 	
 	if (key == nil)  key = @"general";
 	
-	result = _bgColors[key];
+	result = [_bgColors objectForKey:key];
 	if (result == nil)
 	{
 		// No cached colour; load colour description from config file
@@ -401,7 +401,7 @@ enum
 		if (result != nil)
 		{
 			if (_bgColors == nil)  _bgColors = [[NSMutableDictionary alloc] init];
-			_bgColors[key] = result;
+			[_bgColors setObject:result forKey:key];
 		}
 	}
 	

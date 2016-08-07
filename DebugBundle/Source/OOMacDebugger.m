@@ -81,7 +81,7 @@ SOFTWARE.
 	
 	if (class == Nil)  class = [NSObject class];
 	
-	result = _configuration[key];
+	result = [_configuration objectForKey:key];
 	if (![result isKindOfClass:class] && result != [NSNull null])  result = [[value retain] autorelease];
 	if (result == [NSNull null])  result = nil;
 	
@@ -208,7 +208,7 @@ noteChangedConfigrationValue:(in id)newValue
 					 forKey:(in NSString *)key
 {
 	if (_configuration == nil)  _configuration = [[NSMutableDictionary alloc] init];
-	if (newValue != nil)  _configuration[key] = newValue;
+	if (newValue != nil)  [_configuration setObject:newValue forKey:key];
 	else  [_configuration removeObjectForKey:key];
 	
 	[_jsConsoleController noteConfigurationChanged:key];
